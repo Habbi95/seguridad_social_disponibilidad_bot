@@ -166,6 +166,8 @@ if __name__ == '__main__':
                 print('Captcha is numeric. Solving ...')
                 result = eval(operation.replace('x', '*'))
                 final_captcha = numero_to_letras(result)
+                if final_captcha == 'Dieciseis':
+                    continue
 
                 # Fill captcha
                 elem = driver.find_element_by_xpath('//*[@id="ARQ.CAPTCHA"]')
